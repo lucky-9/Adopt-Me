@@ -17,7 +17,7 @@ class Details extends Component {
     console.log(this.props);
     try {
       const res = await fetch(
-        `http://pets-v2.dev-apis.com/pets?id=${this.props.match.params.id}`
+        `https://pets-v2.dev-apis.com/pets?id=${this.props.match.params.id}`
       );
       const details = await res.json();
       console.log("Pet Details: ", details);
@@ -28,7 +28,7 @@ class Details extends Component {
   }
 
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
-  adopt = () => (window.location = "http://bit.ly/pet-adopt");
+  adopt = () => (window.location = "https://bit.ly/pet-adopt");
 
   render() {
     const { animal, breed, city, state, description, name, images, showModal } =
